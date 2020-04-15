@@ -1,0 +1,12 @@
+{
+  "name": "API",
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "API Endpoint": {
+        "url": "https://yourapi/graphql",
+        "introspect": true
+      }
+    }
+  }
+}
