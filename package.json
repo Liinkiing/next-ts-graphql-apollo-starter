@@ -1,7 +1,7 @@
 {
   "name": "next-ts-starter",
   "version": "1.0.0",
-  "description": "A simple Next.JS powered typescript starter with styled components",
+  "description": "A Next powered starter which include support for Apollo with GraphQL, SSR support, codegen, styled component / system and framer motion",
   "scripts": {
     "gql-gen": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 gql-gen",
     "gql-gen:watch": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 gql-gen --watch",
@@ -14,6 +14,13 @@
     "starter",
     "template",
     "styled-components",
+    "styled-system",
+    "framer-motion",
+    "graphql",
+    "graphql-codegen",
+    "codegen",
+    "apollo",
+    "ssr",
     "next",
     "nextjs",
     "react",
