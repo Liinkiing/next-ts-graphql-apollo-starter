@@ -8,7 +8,7 @@ generates:
   ./src/fragmentTypes.json:
     plugins:
       - fragment-matcher
-  ./src/graphql/components.tsx:
+  ./src/graphql/hooks.tsx:
     config:
       immutableTypes: true
       withHooks: true
