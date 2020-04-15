@@ -16,7 +16,6 @@ generates:
       withComponent: false
       avoidOptionals: true
       noNamespaces: true
-      reactApolloVersion: 3
     plugins:
       - add: '/* eslint-disable */'
       - "typescript"
