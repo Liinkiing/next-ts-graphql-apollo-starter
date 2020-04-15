@@ -126,6 +126,9 @@ already be available.
 ### Configuration
 
 All configuration related files are located in the `codegen.yaml` file ([more informations here](https://graphql-code-generator.com/docs/getting-started/codegen-config))
+A `.graphqlconfig` file is also provided, if you use a GraphQL extension in your IDE, it will allow you
+to introspect the schema of a given endpoint and writing it in a `schema.graphql` file.
+You must enter your API url here
 
 ### Examples
 
