@@ -18,4 +18,21 @@ export default createGlobalStyle`
     ${MAIN_BACKGROUND};
     color: ${props => theme(props).colors.text};
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: ${props => theme(props).fonts.heading};
+  }
+
+  code, pre {
+    font-family: ${props => theme(props).fonts.mono};
+  }
+
+  p {
+    font-family: ${props => theme(props).fonts.body};
+  }
 `
