@@ -1,0 +1,25 @@
+schema:
+  - "./schema.graphql"
+documents:
+  - "./src/**/*.graphql"
+overwrite: true
+config: {}
+generates:
+  ./src/fragmentTypes.json:
+    plugins:
+      - fragment-matcher
+  ./src/graphql/components.tsx:
+    config:
+      immutableTypes: true
+      withHooks: true
+      withHOC: false
+      withComponent: false
+      avoidOptionals: true
+      noNamespaces: true
+      reactApolloVersion: 3
+    plugins:
+      - add: '/* eslint-disable */'
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+require: []
