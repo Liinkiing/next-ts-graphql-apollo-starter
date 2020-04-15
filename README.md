@@ -111,7 +111,7 @@ export default withApollo(Index, { ssr: true })
 // your React tree
 ```
 
-It works by actually using the [getDataFromTree](Automatic Static Optimization) from `@apollo/react-ssr`.
+It works by actually using the [getDataFromTree](https://www.apollographql.com/docs/react/performance/server-side-rendering/#using-getdatafromtree) from `@apollo/react-ssr`.
 When using `withApollo`, if ssr is true, the server will render your React Application, starting
 from the lowest children and going back up to your top most component in your hierarchy.
 By doing it this way, it can collect all the queries needed for your page to render, then
