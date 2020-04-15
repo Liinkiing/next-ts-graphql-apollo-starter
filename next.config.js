@@ -15,9 +15,20 @@ module.exports = withPlugins([withNextEnv, withFonts, withImages], {
     maxInactiveAge: 1000 * 60 * 60,
   },
   webpack(config, options) {
+    const { dir } = options
     config.node = {
       fs: 'empty',
     }
+    config.module.rules.push({
+      test: /\.(graphql|gql)$/,
+      include: [dir],
+      exclude: /node_modules/,
+      use: [
+        {
+          loader: 'graphql-tag/loader',
+        },
+      ],
+    })
     config.resolve.alias['~'] = path.join(__dirname, 'src')
     return config
   },
