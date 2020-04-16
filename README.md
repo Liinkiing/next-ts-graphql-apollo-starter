@@ -85,7 +85,9 @@ import { useProjectsQuery } from '~/graphql/hooks'
 const Index: NextPage = () => {
   const { data, error } = useProjectsQuery()
   // No need to wait for the loading to be finished when using ssr: true
-  // it will be already available on the first render on the client
+  // it will be already available on the first render on the client when the request
+  // is made from the server. If you navigate to this page within the router client,
+  // you may still need to handle loading state to avoid flickerings
   if (error) {
     return <div>Error</div>
   }
