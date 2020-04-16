@@ -33,6 +33,7 @@
   "rules": {
     "react/prop-types": "off",
     "@typescript-eslint/indent": "off",
+    "@typescript-eslint/camelcase": "off",
     "react/react-in-jsx-scope": "off",
     "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",
