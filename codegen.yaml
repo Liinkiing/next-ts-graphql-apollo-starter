@@ -4,6 +4,10 @@ documents:
   - "./src/**/*.graphql"
 overwrite: true
 config: {}
+hooks:
+  afterAllFileWrite:
+    - eslint --fix
+    - prettier --write
 generates:
   ./src/fragmentTypes.json:
     plugins:
