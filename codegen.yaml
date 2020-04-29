@@ -1,7 +1,7 @@
 schema:
-  - "./schema.graphql"
+  - './schema.graphql'
 documents:
-  - "./src/**/*.graphql"
+  - './src/**/*.graphql'
 overwrite: true
 config: {}
 hooks:
@@ -9,10 +9,10 @@ hooks:
     - eslint --fix
     - prettier --write
 generates:
-  ./src/fragmentTypes.json:
+  ./src/__generated__/fragmentTypes.json:
     plugins:
       - fragment-matcher
-  ./src/graphql/hooks.tsx:
+  ./src/__generated__/hooks.tsx:
     config:
       immutableTypes: true
       withHooks: true
@@ -22,7 +22,7 @@ generates:
       noNamespaces: true
     plugins:
       - add: '/* eslint-disable */'
-      - "typescript"
-      - "typescript-operations"
-      - "typescript-react-apollo"
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
 require: []
