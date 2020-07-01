@@ -34,7 +34,7 @@ The starter comes by default with Apollo (not the **v3@beta** version, because i
 with SSR). All Apollo related code and config is located under `~/apollo` folder. It contains
 the **HOC** `withApollo` and the client.
 It uses environment variables to define the API endpoint, so you have to copy/paste the `.env.sample`
-file and rename it to `.env` (not committed). The variable name is `NEXT_STATIC_GRAPHQL_API`
+file and rename it to `.env` (not committed). The variable name is `NEXT_PUBLIC_GRAPHQL_API`
 
 To make the codegen work, you must have a `schema.graphql` at the root (can be
 modified in the `codegen.yaml`, see [the configuration reference](https://graphql-code-generator.com/docs/getting-started/codegen-config)).

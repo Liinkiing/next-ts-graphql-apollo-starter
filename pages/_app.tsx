@@ -12,14 +12,16 @@ class MyApp extends App {
     const { Component, pageProps, router } = this.props
 
     return (
-      <ThemeProvider theme={light}>
-        <GlobalStyle />
-        <NProgress color={light.colors.primary} spinner={false} />
-        <AppNav />
-        <AnimatePresence exitBeforeEnter initial={false}>
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
-      </ThemeProvider>
+      <React.StrictMode>
+        <ThemeProvider theme={light}>
+          <GlobalStyle />
+          <NProgress color={light.colors.primary} spinner={false} />
+          <AppNav />
+          <AnimatePresence exitBeforeEnter initial={false}>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
+        </ThemeProvider>
+      </React.StrictMode>
     )
   }
 }

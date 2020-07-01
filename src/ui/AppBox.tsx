@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import styled from 'styled-components'
 import {
   border,
@@ -159,7 +160,7 @@ const AppBox = styled<AppBoxProps>('div').withConfig({
   shouldForwardProp,
 })(
   props => ({
-    textTransform: props.uppercase ? 'uppercase' : undefined,
+    textTransform: (props as any).uppercase ? 'uppercase' : undefined,
   }),
   color,
   space,

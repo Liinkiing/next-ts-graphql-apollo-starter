@@ -9,7 +9,7 @@ export default (initialState, ctx): ApolloClient<any> => {
   return new ApolloClient({
     ssrMode: Boolean(ctx),
     link: new HttpLink({
-      uri: process.env.NEXT_STATIC_GRAPHQL_API, // Server URL (must be absolute)
+      uri: process.env.NEXT_PUBLIC_GRAPHQL_API, // Server URL (must be absolute)
       credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
       fetch,
     }),
