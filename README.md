@@ -30,8 +30,7 @@ $ yarn start
 
 ## GraphQL support
 
-The starter comes by default with Apollo (not the **v3@beta** version, because it was not working
-with SSR). All Apollo related code and config is located under `~/apollo` folder. It contains
+The starter comes by default with Apollo@3. All Apollo related code and config is located under `~/apollo` folder. It contains
 the **HOC** `withApollo` and the client.
 It uses environment variables to define the API endpoint, so you have to copy/paste the `.env.sample`
 file and rename it to `.env` (not committed). The variable name is `NEXT_PUBLIC_GRAPHQL_API`
