@@ -3,7 +3,7 @@ import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 
-export default (initialState, ctx): ApolloClient<any> => {
+const client = (initialState, ctx): ApolloClient<any> => {
   // The `ctx` (NextPageContext) will only be present on the server.
   // use it to extract auth headers (ctx.req) or similar.
   return new ApolloClient({
@@ -16,3 +16,5 @@ export default (initialState, ctx): ApolloClient<any> => {
     cache: new InMemoryCache().restore(initialState),
   })
 }
+
+export default client

@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const path = require('path')
+const webpack = require('webpack')
+
 const dotenvLoad = require('dotenv-load')
 
 const withPlugins = require('next-compose-plugins')
@@ -18,6 +19,11 @@ module.exports = withPlugins([withFonts, withImages], {
     config.node = {
       fs: 'empty',
     }
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+      }),
+    )
     config.module.rules.push({
       test: /\.(graphql|gql)$/,
       include: [dir],
@@ -28,6 +34,7 @@ module.exports = withPlugins([withFonts, withImages], {
         },
       ],
     })
+
     return config
   },
 })
