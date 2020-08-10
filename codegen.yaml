@@ -14,11 +14,7 @@ generates:
       - fragment-matcher
   ./src/__generated__/hooks.tsx:
     config:
-      reactApolloVersion: 3
       immutableTypes: true
-      withHooks: true
-      withHOC: false
-      withComponent: false
       avoidOptionals: true
       noNamespaces: true
     plugins:
