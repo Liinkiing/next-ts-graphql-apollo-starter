@@ -11,7 +11,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --cache --fix --report-unused-disable-directives src/**/*.{js,ts,jsx,tsx}",
-    "ts:check": "tsc --noEmit"
+    "ts:check": "tsc --noEmit",
+    "test": "jest --runInBand --coverage=false",
+    "test:ci": "yarn test --ci",
+    "test:watch": "yarn test --watch"
   },
   "keywords": [
     "starter",
@@ -109,7 +112,8 @@
     ],
     "*.{js,ts,jsx,tsx}": [
       "eslint --fix",
-      "prettier --write"
+      "prettier --write",
+      "jest -c jest.config.js --bail --runInBand --findRelatedTests --coverage=false"
     ]
   }
 }
