@@ -1,6 +1,4 @@
-import { Typography } from 'styled-components'
-
-const typography: Typography = {
+const typography = {
   letterSpacings: {
     tighter: '-0.05em',
     tight: '-0.025em',

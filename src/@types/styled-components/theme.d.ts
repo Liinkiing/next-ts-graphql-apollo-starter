@@ -1,9 +1,11 @@
 import 'styled-components'
+import colors from '~/styles/modules/colors'
 
 export interface Breakpoints {
   tablet: string
   desktop: string
   wide: string
+  ultraWide: string
 }
 
 declare module 'styled-components' {
@@ -60,7 +62,13 @@ declare module 'styled-components' {
   export interface DefaultTheme extends Typography {
     breakpoints: string[]
     space: readonly [number, ...string]
-    colors: {
+    mediaQueries: {
+      tablet: string
+      desktop: string
+      wide: string
+      ultraWide: string
+    }
+    colors: typeof colors & {
       background: string
       text: string
       link: string
