@@ -50,7 +50,8 @@ Based on this and your \*.graphql files in `~/graphql/**`, it will auto generate
 corresponding hooks.
 
 When writing \*.graphql files, you can also import other \*.graphql files by using
-comments
+comments, but this is no longer necessary because last versions of graphql codegen inline
+\*.graphql docs.
 
 `~/graphql/fragments/ProjectCard_project.graphql`
 
@@ -64,8 +65,6 @@ fragment ProjectCard_project on Project {
 `~/graphql/queries/Projects.graphql`
 
 ```graphql
-#import '~/graphql/fragments/ProjectCard_project.graphql'
-
 query Projects {
   projects {
     id
