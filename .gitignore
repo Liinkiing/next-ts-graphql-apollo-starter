@@ -33,3 +33,6 @@ yarn-error.log*
 
 # graphql
 /src/__generated__/**
+
+# Cypress
+cypress/videos

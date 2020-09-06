@@ -14,7 +14,10 @@
     "ts:check": "tsc --noEmit",
     "test": "jest --runInBand --coverage=false",
     "test:ci": "yarn test --ci",
-    "test:watch": "yarn test --watch"
+    "test:watch": "yarn test --watch",
+    "cy:open": "yarn --cwd cypress cy:open",
+    "cy:run": "yarn --cwd cypress cy:run",
+    "cy:run:cy": "yarn --cwd cypress cy:run:ci"
   },
   "keywords": [
     "starter",
@@ -30,7 +33,8 @@
     "next",
     "nextjs",
     "react",
-    "typescript"
+    "typescript",
+    "cypress"
   ],
   "repository": {
     "url": "https://github.com/Liinkiing/next-ts-graphql-apollo-starter",
