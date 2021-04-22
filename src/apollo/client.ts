@@ -1,6 +1,6 @@
+import { InMemoryCache } from 'apollo-cache-inmemory'
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
-import { InMemoryCache } from 'apollo-cache-inmemory'
 
 const client = (initialState, ctx): ApolloClient<any> => {
   // The `ctx` (NextPageContext) will only be present on the server.

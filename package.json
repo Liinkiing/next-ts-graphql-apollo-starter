@@ -80,6 +80,7 @@
     "@graphql-codegen/typescript": "^1.21.1",
     "@graphql-codegen/typescript-operations": "^1.17.15",
     "@graphql-codegen/typescript-react-apollo": "^2.2.3",
+    "@trivago/prettier-plugin-sort-imports": "^2.0.2",
     "@types/jest": "^26.0.22",
     "@types/node": "^14.14.37",
     "@types/nprogress": "^0.2.0",
