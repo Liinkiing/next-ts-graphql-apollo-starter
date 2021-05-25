@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ResponsiveValue } from 'styled-system'
+import type { ResponsiveValue } from 'styled-system'
 
 import AppBox, { AppBoxOwnProps, FontSize, PolymorphicComponent } from '~/ui/AppBox'
 import jsxInnerText from '~/utils/jsx'

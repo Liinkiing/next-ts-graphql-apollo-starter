@@ -1,5 +1,5 @@
 import NextHead from 'next/head'
-import React from 'react'
+import type { FC } from 'react'
 
 const defaultDescription = 'A starter made by https://github.com/Liinkiing'
 const defaultOGURL = ''
@@ -12,7 +12,7 @@ interface Props {
   socialImage?: string
 }
 
-const AppHead: React.FC<Props> = ({ title, description, url, socialImage }) => (
+const AppHead: FC<Props> = ({ title, description, url, socialImage }) => (
   <NextHead>
     <meta key="charset" charSet="UTF-8" />
     <title>{title}</title>
