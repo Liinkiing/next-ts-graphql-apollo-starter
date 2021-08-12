@@ -1,7 +1,12 @@
 schema:
+  - './client.schema.graphql'
   - './schema.graphql'
 documents:
-  - './src/**/*.graphql'
+  - "src/**/*.graphql"
+  - "pages/**/*.tsx"
+  - "pages/**/*.ts"
+  - "src/**/*.tsx"
+  - "src/**/*.ts"
 overwrite: true
 config: {}
 hooks:
@@ -9,15 +14,18 @@ hooks:
     - eslint --fix
     - prettier --write
 generates:
-  ./src/__generated__/fragmentTypes.json:
+  ./src/__generated__/possibleTypes.json:
     plugins:
-      - fragment-matcher
-  ./src/__generated__/hooks.tsx:
+      - "fragment-matcher"
+  ./src/__generated__/graphql.tsx:
     config:
+      useTypeImports: true
       immutableTypes: true
-      avoidOptionals: true
+      avoidOptionals:
+        inputValue: false
       noNamespaces: true
     plugins:
+      - 'typescript-apollo-client-helpers'
       - 'typescript'
       - 'typescript-operations'
       - 'typescript-react-apollo'

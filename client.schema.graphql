@@ -1,0 +1,3 @@
+directive @client on FIELD
+directive @argumentDefinitions on FRAGMENT_DEFINITION
+directive @arguments on FRAGMENT_SPREAD
