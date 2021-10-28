@@ -63,6 +63,10 @@ const securityHeaders = [
 ]
 /** @type {import('next/dist/server/config-shared').NextConfig} */
 const nextConfig = {
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
+  swcMinify: true,
   experimental: {
     esmExternals: true,
   },
