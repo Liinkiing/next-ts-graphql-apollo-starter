@@ -1,7 +1,9 @@
+/* eslint-disable unicorn/prefer-node-protocol */
 import { ApolloClient, from, HttpLink, InMemoryCache } from '@apollo/client'
 import { createFragmentArgumentLink } from 'apollo-link-fragment-argument'
 import merge from 'deepmerge'
 import * as https from 'https'
+// eslint-disable-next-line import/no-extraneous-dependencies
 import isEqual from 'lodash/isEqual'
 import { useMemo } from 'react'
 

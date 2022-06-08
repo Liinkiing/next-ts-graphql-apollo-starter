@@ -2,7 +2,8 @@ import * as React from 'react'
 import type { FlexboxProps } from 'styled-system'
 
 import useTheme from '~/hooks/useTheme'
-import AppBox, { AppBoxProps, PolymorphicComponent } from '~/ui/AppBox'
+import type { AppBoxProps, PolymorphicComponent } from '~/ui/AppBox'
+import AppBox from '~/ui/AppBox'
 
 export interface FlexOptions {
   align?: FlexboxProps['alignItems']
@@ -35,6 +36,7 @@ const Flex = React.forwardRef<HTMLElement, FlexProps>((props, ref) => {
             // we prefer this approach to have a broader compatibility, and also to support
             // responsive values 🔥🥵🔥
             ...(Array.isArray(direction) &&
+              // eslint-disable-next-line unicorn/no-array-reduce
               direction.reduce(
                 (acc, value, index) => {
                   return {
